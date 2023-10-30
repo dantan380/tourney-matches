@@ -1,6 +1,11 @@
 import Player from "./Player";
+import playerData from "../../data/playerData";
+import matchData from "../../data/matchData";
+import { preparePlayerData, addWinsToPlayers } from "../../helpers/playerHelpers";
 
-const PlayerList = function() {
+const PlayerList = function(props) {
+  const playerDataArray = preparePlayerData(playerData);
+  const parsedPlayerData = addWinsToPlayers(playerDataArray, matchData);
   return(
     <section className="PlayerList">
       <h1>Current participating players</h1>
