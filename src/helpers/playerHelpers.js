@@ -5,7 +5,7 @@ export const preparePlayerData = (playerData) => {
 export const addWinsToPlayers = (playerDataArray, matchData) => {
   return playerDataArray.map(player => {
     const currentWins = matchData.reduce((acc, match) => {
-      if (match.winner === playerDataArray.gamerTag) {
+      if (match.winner === player.gamerTag) {
         return acc += 1;
       } else {
         return acc;
