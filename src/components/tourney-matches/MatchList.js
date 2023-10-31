@@ -1,8 +1,7 @@
 import Match from "./Match";
-import matchData from "../../data/matchData";
 
 const MatchList = function (props) {
-  const oneMatch = matchData[0];
+  const oneMatch = props.matches[0];
   return (
     <section className="PlayerList MatchList">
       <h1>Match list</h1>

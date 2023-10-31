@@ -1,12 +1,7 @@
 import Player from "./Player";
-import playerData from "../../data/playerData";
-import matchData from "../../data/matchData";
-import { preparePlayerData, addWinsToPlayers } from "../../helpers/playerHelpers";
 
 const PlayerList = function(props) {
-  const playerDataArray = preparePlayerData(playerData);
-  const parsedPlayerData = addWinsToPlayers(playerDataArray, matchData);
-  const onePlayer = parsedPlayerData[0]
+  const onePlayer = props.playerData[0];
 
   return(
     <section className="PlayerList">
